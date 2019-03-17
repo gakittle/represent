@@ -4,14 +4,13 @@ import Office from './Office.jsx';
 const Level = props => {
   const { items } = props;
   const levels = Object.keys(items.divisions);
-  console.log(levels);
   return (
     <div id="levels">
       {levels.map(level => {
         const region = items.divisions[level];
-        if (region.officeIndices.length) {
+        if (region.officeIndices) {
           return (
-            <div id="level">
+            <div id="level" key={region.name}>
               <div>{region.name}</div>
               <Office items={items} offices={region.officeIndices} />
             </div>

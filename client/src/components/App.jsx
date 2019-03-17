@@ -35,10 +35,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Represent</h1>
-        <h3>
-          Do you know who speaks for you? Enter your address here for a one-stop
-          overview!
-        </h3>
+        <h3>Who speaks for you?</h3>
         <Address search={this.search} />
         <List items={this.state.items} />
       </div>
