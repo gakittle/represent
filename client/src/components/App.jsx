@@ -9,6 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       items: {
+        divisions: [],
         offices: [],
         officials: []
       }
