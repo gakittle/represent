@@ -1,14 +1,15 @@
 import React from 'react';
-import ListItem from './ListItem.jsx';
+import Level from './Level.jsx';
 
-const List = props => (
-  <div>
-    <h4> Your Representatives </h4>
-    There are {props.items.length} items.
-    {props.items.map(item => (
-      <ListItem item={item} />
-    ))}
-  </div>
-);
+const List = props => {
+  const { items } = props;
+  return (
+    <div id="list">
+      You have {items.officials.length} elected representatives.
+      <h4> Your Representatives </h4>
+      <Level items={items} />
+    </div>
+  );
+};
 
 export default List;
