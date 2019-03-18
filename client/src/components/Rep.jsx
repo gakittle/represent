@@ -7,33 +7,51 @@ const Rep = props => {
       {reps.map(index => {
         const rep = items.officials[index];
         if (rep.name === 'VACANT') {
-          return <div id="rep">{rep.name}</div>;
+          return <div className="rep">{rep.name}</div>;
         }
         // const pic = rep.photoUrl || defaultPic;
-        const phone = rep.phones ? rep.phones[0] : 'Not Available';
-        const email = rep.emails ? rep.emails[0] : 'Not Available';
-        const url = rep.urls ? rep.urls[0] : 'Not Available';
+        const phone = rep.phones ? rep.phones[0] : '';
+        const email = rep.emails ? rep.emails[0] : '';
+        const url = rep.urls ? rep.urls[0] : '';
+        if (rep.channels) {
+          var social = rep.channels.map(channel => {
+            return (
+              <div className="info">
+                {channel.type}: {channel.id}
+              </div>
+            );
+          });
+        } else {
+          var social = <div className="info" />;
+        }
+        const address = rep.address
+          ? rep.address[0]
+          : {
+              line1: '',
+              city: '',
+              state: '',
+              zip: ''
+            };
+
         return (
-          <div id="rep" key={rep.name}>
-            <div id="col1">
+          <div className="rep" key={rep.name}>
+            <div className="col1">
               <div className="profile" />
             </div>
-            <div id="col2">
+            <div className="col2">
               <div className="info">{rep.name}</div>
               <div className="info">{rep.party}</div>
-              <div className="info">Phone: {phone}</div>
-              <div className="info">Email: {email}</div>
-              <div className="info">{url}</div>
+              <div className="info">{address.line1}</div>
+              <div className="info">
+                {address.city}, {address.state} {address.zip}
+              </div>
             </div>
-            {/* <div id="col3">
-              {rep.channels.map(social => {
-                return (
-                  <div className="info">
-                    {social.type}: {social.id}
-                  </div>
-                );
-              })}
-            </div> */}
+            <div className="col3">
+              <div className="info">{phone}</div>
+              <div className="info">{email}</div>
+              <div className="info">{url}</div>
+              <div id="info">{social}</div>
+            </div>
           </div>
         );
       })}
