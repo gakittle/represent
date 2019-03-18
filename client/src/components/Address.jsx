@@ -14,7 +14,7 @@ class Address extends React.Component {
         <form>
           <input
             id="input"
-            defaultValue="Enter your address here"
+            placeholder="Enter your address here"
             type="text"
             onChange={event => {
               this.setState({ address: event.target.value });
