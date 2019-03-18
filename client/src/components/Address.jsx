@@ -12,9 +12,9 @@ class Address extends React.Component {
     return (
       <div id="address">
         <form>
-          <div>Address:</div>
           <input
             id="input"
+            defaultValue="Enter your address here"
             type="text"
             onChange={event => {
               this.setState({ address: event.target.value });

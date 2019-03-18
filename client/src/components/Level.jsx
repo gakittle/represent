@@ -11,7 +11,7 @@ const Level = props => {
         if (region.officeIndices) {
           return (
             <div id="level" key={region.name}>
-              <div>{region.name}</div>
+              <div id="level-name">{region.name}</div>
               <Office items={items} offices={region.officeIndices} />
             </div>
           );

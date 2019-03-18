@@ -33,7 +33,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="root">
         <h1>Represent</h1>
         <h3>Who speaks for you?</h3>
         <Address search={this.search} />
