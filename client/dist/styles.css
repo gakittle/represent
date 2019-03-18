@@ -1,0 +1,70 @@
+html,
+body {
+  width: 100%;
+}
+
+#app {
+  width: 100%;
+  font-family: Lato;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 80%;
+  justify-content: center;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+#address {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+#input {
+  font-style: italic;
+}
+
+#list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#levels {
+  width: 100%;
+}
+
+#level {
+  margin-bottom: 18px;
+}
+
+#level-name {
+  color: rgb(153, 149, 149);
+  font-size: 2em;
+  text-align: center;
+  border-width: 0 0 1px 0;
+  border-color: rgb(195, 192, 192);
+  border-style: solid;
+  padding: 15px 0px;
+  margin-bottom: 35px;
+}
+
+#office-name {
+  font-size: 125%;
+  font-weight: 600;
+  margin: 30px 0 5px 0;
+}
+
+#rep {
+  padding: 15px;
+  border: 1px solid rgb(195, 192, 192);
+  border-radius: 10px;
+  margin: 20px 0 40px 0;
+  box-shadow: 1px 2px 8px rgba(153, 153, 153, 0.4);
+}
