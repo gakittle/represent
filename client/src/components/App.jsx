@@ -2,7 +2,6 @@ import React from 'react';
 import $ from 'jquery';
 import Address from './Address.jsx';
 import List from './List.jsx';
-import GCI_API_KEY from '../config/config.js';
 
 class App extends React.Component {
   constructor(props) {
