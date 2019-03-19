@@ -20,15 +20,12 @@ class App extends React.Component {
   handleSearch(e, address) {
     e.preventDefault();
     document.getElementById('input').value = '';
-    const queryURL = `https://www.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${GCI_API_KEY}`;
-    fetch(queryURL)
-      .then(res => {
-        res.json().then(data => {
-          console.log(data);
-          this.setState({ items: data });
-        });
-      })
-      .catch(error => console.error(error));
+    fetch(`/api/reps/${address}`).then(res => {
+      res.json().then(data => {
+        console.log(data);
+        this.setState({ items: data });
+      });
+    });
   }
 
   render() {

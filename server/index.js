@@ -1,18 +1,16 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var items = require('../database');
+const { getReps } = require('./routes.js');
 
 var app = express();
 
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('/items', function(req, res) {
-  items.selectAll(function(err, data) {
-    if (err) {
-      res.sendStatus(500);
-    } else {
-      res.json(data);
-    }
+app.get('/api/reps/:address', function(req, res) {
+  getReps(req.params.address, (err, data) => {
+    if (err) res.sendStatus(500);
+    else res.send(data);
   });
 });
 
