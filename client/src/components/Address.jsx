@@ -11,7 +11,7 @@ class Address extends React.Component {
   render() {
     return (
       <div id="address">
-        <form>
+        <form id="submit">
           <input
             id="input"
             placeholder="Enter your address here"
@@ -21,8 +21,9 @@ class Address extends React.Component {
             }}
           />
           <input
+            id="btn"
             type="submit"
-            value="Show me!"
+            value="Let's go!"
             onClick={event => {
               this.props.search(event, this.state.address);
             }}

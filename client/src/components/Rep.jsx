@@ -9,7 +9,9 @@ const Rep = props => {
         if (rep.name === 'VACANT') {
           return <div className="rep">{rep.name}</div>;
         }
-        // const pic = rep.photoUrl || defaultPic;
+        const pic =
+          rep.photoUrl ||
+          'http://chittagongit.com//images/default-profile-icon/default-profile-icon-24.jpg';
         const phone = rep.phones ? rep.phones[0] : '';
         const email = rep.emails ? rep.emails[0] : '';
         const url = rep.urls ? rep.urls[0] : '';
@@ -36,10 +38,12 @@ const Rep = props => {
         return (
           <div className="rep" key={rep.name}>
             <div className="col1">
-              <div className="profile" />
+              <div className="wrap">
+                <img src={pic} />
+              </div>
             </div>
             <div className="col2">
-              <div className="info">{rep.name}</div>
+              <div className="info name">{rep.name}</div>
               <div className="info">{rep.party}</div>
               <div className="info">{address.line1}</div>
               <div className="info">

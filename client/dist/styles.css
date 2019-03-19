@@ -1,6 +1,8 @@
 html,
 body {
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 #app {
@@ -11,29 +13,92 @@ body {
 }
 
 #root {
-  width: 80%;
+  width: 100%;
   justify-content: center;
+}
+
+#banner {
+  background-image: url('https://www.ricoh-usa.com/-/media/ricoh/common/images/hero/tier2/t2-hero-ind-state-and-local.jpg?h=375&la=en&w=1367&tm=20171211T123650Z&hash=5520C486F07762C42FE43C0B6A85804A48B00F24');
 }
 
 h1,
 h3 {
-  text-align: center;
+  padding: 20px 0 0 20px;
+  margin: 0;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 #address {
   margin-bottom: 18px;
   display: flex;
   justify-content: center;
+  padding: 40px 0;
 }
 
-#list {
+#submit {
+  width: 50%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
-#levels {
+#input {
+  height: 1.75em;
+  width: 80%;
+  font-size: 1.5em;
+  border-width: 0px;
+  border-radius: 5px;
+  padding: 0 8px;
+}
+
+#btn {
+  background-color: #de0b35;
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  border-width: 0px;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding: 0 5px;
+}
+
+#btn:hover {
+  background-color: #ff1040;
+  cursor: pointer;
+}
+
+#msg {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: 600;
+  margin: 35px 0 25px 0;
+}
+
+#msg2 {
+  font-weight: 900;
+  color: rgb(45, 45, 190);
+  padding: 0 8px;
+}
+
+#list {
   width: 100%;
+}
+
+#levels {
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #level {
@@ -41,7 +106,8 @@ h3 {
 }
 
 #level-name {
-  color: rgb(153, 149, 149);
+  /* color: rgb(153, 149, 149); */
+  color: #dd153d;
   font-size: 2em;
   text-align: center;
   border-width: 0 0 1px 0;
@@ -55,6 +121,7 @@ h3 {
   font-size: 125%;
   font-weight: 600;
   margin: 30px 0 5px 0;
+  color: rgb(45, 45, 190);
 }
 
 .rep {
@@ -68,6 +135,7 @@ h3 {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .col1,
@@ -77,11 +145,33 @@ h3 {
   flex-direction: row;
   flex-wrap: wrap;
   word-break: break-all;
-  align-content: space-around;
+  align-content: space-between;
   width: 30%;
 }
 
+.col1 {
+  justify-content: center;
+}
+
+.wrap {
+  width: 60%;
+  height: 80%;
+}
+
+.wrap img {
+  max-width: 100%;
+  max-height: auto;
+}
+
 .info {
-  color: rgb(151, 151, 151);
+  color: rgb(128, 127, 127);
   width: 100%;
+  margin: 5px 0;
+}
+
+.name {
+  margin: 10px 0;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: rgb(104, 104, 104);
 }

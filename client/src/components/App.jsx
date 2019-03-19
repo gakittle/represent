@@ -34,9 +34,15 @@ class App extends React.Component {
   render() {
     return (
       <div id="root">
-        <h1>Represent</h1>
-        <h3>Who speaks for you?</h3>
-        <Address search={this.search} />
+        <div id="banner">
+          <h1>Represent</h1>
+          <h3>Who speaks for you?</h3>
+          <Address search={this.search} />
+        </div>
+        <div id="msg">
+          <div>Speak. Act. </div>
+          <div id="msg2">Represent.</div>
+        </div>
         <List items={this.state.items} />
       </div>
     );
